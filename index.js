@@ -205,8 +205,6 @@ function game(user, computer){
 
 
 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -218,11 +216,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(inputKM){
+  return inputKM*0.621371;
 }
-
-
 
 //Task 5b - Feet to CM
 /*
@@ -232,11 +228,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(inputCM){
+  return inputCM*(1/30.48);
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -248,10 +242,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(startingNum){
+  let remaining = startingNum-1;
+  let a = `${startingNum} bottles of soda on the wall, ${startingNum} bottles of soda, take one down pass it around ${remaining} bottles of soda on the wall`
+  return a;
 }
 
+console.log(annoyingSong(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -268,9 +265,24 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
+function grade(grade){
+  if (grade < 60) {
+    return "you got an F";
+  }
+  else if (grade < 70) {
+    return "you got a D";
+  }
+  else if (grade < 80) {
+    return "you got a C";
+  }
+  else if (grade < 90) {
+    return "you got a B";
+  }
+  else {
+    return "you got an A";
+  }
+
+} 
 
 
 
